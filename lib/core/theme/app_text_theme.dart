@@ -28,9 +28,9 @@ class AppTextTheme {
 
   // Secondary Text
   static const TextStyle bodyText2 = TextStyle(
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: FontWeight.w400,
-    color: AppColors.txGreyColor,
+    color: AppColors.txBlackColor,
   );
 
   // TextFormField Label

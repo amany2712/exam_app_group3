@@ -1,5 +1,8 @@
 import 'package:exam_app/config/di/di.dart';
 import 'package:exam_app/core/theme/app_theme.dart';
+import 'package:exam_app/features/auth/presentation/auth_screens/forget_password_screens/email_verification_view.dart';
+import 'package:exam_app/features/auth/presentation/auth_screens/forget_password_screens/forget_password_view.dart';
+import 'package:exam_app/features/auth/presentation/auth_screens/forget_password_screens/reset_password_view.dart';
 import 'package:flutter/material.dart';
 
 void main (){
@@ -13,13 +16,10 @@ class ExamApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Exam App',
       theme: AppTheme.lightTheme,
-      home: const Scaffold(
-        body: Center(
-          child: Text('Hello, World!'),
-        ),
-      ),
+      home:  ResetPasswordView(),
     );
   }
 }
