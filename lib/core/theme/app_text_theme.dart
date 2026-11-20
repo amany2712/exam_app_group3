@@ -8,14 +8,14 @@ class AppTextTheme {
   // AppBar Title
   static const TextStyle headline1 = TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w500,
     color: AppColors.txBlackColor,
   );
 
   // Screen Titles
   static const TextStyle headline2 = TextStyle(
-    fontSize: 24,
-    fontWeight: FontWeight.bold,
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
     color: AppColors.txBlackColor,
   );
 
@@ -23,7 +23,7 @@ class AppTextTheme {
   static const TextStyle bodyText1 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.w400,
-    color: AppColors.txBlackColor,
+    color: AppColors.txGreyColor,
   );
 
   // Secondary Text
@@ -35,16 +35,16 @@ class AppTextTheme {
 
   // TextFormField Label
   static const TextStyle inputLabel = TextStyle(
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: FontWeight.w400,
     color: AppColors.txGreyColor,
   );
 
   // TextFormField Hint
   static const TextStyle inputHint = TextStyle(
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: FontWeight.w400,
-    color: AppColors.hintColor,
+    color: AppColors.txLightGreyColor,
   );
 
   // Button Text

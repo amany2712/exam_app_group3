@@ -13,7 +13,6 @@ class AppTheme {
 
     scaffoldBackgroundColor: AppColors.backgroundColor,
 
-    fontFamily: 'Roboto',
 
     colorScheme: const ColorScheme.light(
       primary: AppColors.primaryColor,
