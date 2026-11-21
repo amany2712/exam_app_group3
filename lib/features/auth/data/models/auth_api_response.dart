@@ -20,5 +20,7 @@ class AuthApiResponse {
     factory AuthApiResponse.fromJson(Map<String, dynamic> json) => _$AuthApiResponseFromJson(json);
 
     Map<String, dynamic> toJson() => _$AuthApiResponseToJson(this);
+
+
 }
 
