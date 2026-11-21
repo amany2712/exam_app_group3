@@ -5,8 +5,8 @@ import 'package:retrofit/retrofit.dart';
 part 'api_client.g.dart';
 
 @RestApi()
-abstract class RestClient {
-  factory RestClient(Dio dio) = _RestClient;
+abstract class ApiClient {
+  factory ApiClient(Dio dio) = _ApiClient;
 
   @GET('/tasks')
   Future<dynamic> getTasks();
