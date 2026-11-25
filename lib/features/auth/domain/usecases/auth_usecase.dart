@@ -1,9 +1,8 @@
 import 'package:exam_app/config/base_response/base_response.dart';
-import 'package:exam_app/features/auth/data/models/forget_password_response.dart';
-import 'package:exam_app/features/auth/data/models/reset_password_response.dart';
-import 'package:exam_app/features/auth/data/models/verify_reset_code_response.dart';
 import 'package:exam_app/features/auth/domain/entities/auth_entity.dart';
-import 'package:exam_app/features/auth/domain/entities/user_entity.dart';
+import 'package:exam_app/features/auth/domain/entities/forget_password_entity.dart';
+import 'package:exam_app/features/auth/domain/entities/reset_password_entity.dart';
+import 'package:exam_app/features/auth/domain/entities/verify_reset_code_entity.dart';
 import 'package:exam_app/features/auth/domain/repo/auth_repo.dart';
 import 'package:exam_app/features/auth/domain/request_params_class/forget_password_request.dart';
 import 'package:exam_app/features/auth/domain/request_params_class/reset_password_request.dart';
@@ -25,21 +24,21 @@ class AuthUseCase {
     return authRepo.signIn(email: email, password: password);
   }
 
-  Future<BaseResponse<ForgetPasswordResponse>> forgotPasswordCall(
-    ForgetPasswordRequest request,
-  ) {
-    return authRepo.forgotPassword(request: request);
-  }
+  Future<BaseResponse<ForgetPasswordEntity>> forgotPasswordCall(
+  ForgetPasswordRequest request,
+) {
+  return authRepo.forgotPassword(request: request);
+}
 
-  Future<BaseResponse<VerifyResetCodeResponse>> verifyResetCodeCall(
-    VerifyResetCodeRequest request,
-  ) {
-    return authRepo.verifyResetCode(request: request);
-  }
+Future<BaseResponse<VerifyResetCodeEntity>> verifyResetCodeCall(
+  VerifyResetCodeRequest request,
+) {
+  return authRepo.verifyResetCode(request: request);
+}
 
-  Future<BaseResponse<ResetPasswordResponse>> resetPasswordCall(
-    ResetPasswordRequest request,
-  ) {
-    return authRepo.resetPassword(request: request);
-  }
+Future<BaseResponse<ResetPasswordEntity>> resetPasswordCall(
+  ResetPasswordRequest request,
+) {
+  return authRepo.resetPassword(request: request);
+}
 }

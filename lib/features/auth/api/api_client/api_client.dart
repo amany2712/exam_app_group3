@@ -9,8 +9,6 @@ import 'package:exam_app/features/auth/data/models/verify_reset_code_response.da
 import 'package:exam_app/features/auth/domain/request_params_class/forget_password_request.dart';
 import 'package:exam_app/features/auth/domain/request_params_class/reset_password_request.dart';
 import 'package:exam_app/features/auth/domain/request_params_class/verify_reset_code_request.dart';
-import 'package:injectable/injectable.dart';
-import 'package:json_annotation/json_annotation.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'api_client.g.dart';
