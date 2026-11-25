@@ -1,21 +1,31 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:exam_app/features/auth/domain/entities/verify_reset_code_entity.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'verify_reset_code_response.freezed.dart';
 part 'verify_reset_code_response.g.dart';
 
-@JsonSerializable()
-class VerifyResetCodeResponse {
-  @JsonKey(name: 'message')
-  final String? message;
+@freezed
+class VerifyResetCodeResponse with _$VerifyResetCodeResponse {
+  const factory VerifyResetCodeResponse({
+    String? message,
+  }) = _VerifyResetCodeResponse;
 
-  const VerifyResetCodeResponse({
-    this.message,
-  });
-
-  factory VerifyResetCodeResponse.fromJson(
-    Map<String, dynamic> json,
-  ) =>
+  factory VerifyResetCodeResponse.fromJson(Map<String, dynamic> json) =>
       _$VerifyResetCodeResponseFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$VerifyResetCodeResponseToJson(this);
+  @override
+  // TODO: implement message
+  String? get message => throw UnimplementedError();
+
+  @override
+  Map<String, dynamic> toJson() {
+    // TODO: implement toJson
+    throw UnimplementedError();
+  }
+}
+
+extension VerifyResetCodeResponseMapper on VerifyResetCodeResponse {
+  VerifyResetCodeEntity toEntity() {
+    return VerifyResetCodeEntity(message: message);
+  }
 }

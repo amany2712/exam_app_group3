@@ -1,21 +1,31 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:exam_app/features/auth/domain/entities/reset_password_entity.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'reset_password_response.freezed.dart';
 part 'reset_password_response.g.dart';
 
-@JsonSerializable()
-class ResetPasswordResponse {
-  @JsonKey(name: 'message')
-  final String? message;
+@freezed
+class ResetPasswordResponse with _$ResetPasswordResponse {
+  const factory ResetPasswordResponse({
+    String? message,
+  }) = _ResetPasswordResponse;
 
-  const ResetPasswordResponse({
-    this.message,
-  });
-
-  factory ResetPasswordResponse.fromJson(
-    Map<String, dynamic> json,
-  ) =>
+  factory ResetPasswordResponse.fromJson(Map<String, dynamic> json) =>
       _$ResetPasswordResponseFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$ResetPasswordResponseToJson(this);
+  @override
+  // TODO: implement message
+  String? get message => throw UnimplementedError();
+
+  @override
+  Map<String, dynamic> toJson() {
+    // TODO: implement toJson
+    throw UnimplementedError();
+  }
+}
+
+extension ResetPasswordResponseMapper on ResetPasswordResponse {
+  ResetPasswordEntity toEntity() {
+    return ResetPasswordEntity(message: message);
+  }
 }
