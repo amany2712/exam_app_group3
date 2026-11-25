@@ -27,4 +27,6 @@ class AppStrings {
   static const String resendCodeQ = 'Didn\'t receive code?';
   static const String resendCode = 'Resend';
 
+  
+  static const String genericErrorMsg = 'something went wrong!';
 }
