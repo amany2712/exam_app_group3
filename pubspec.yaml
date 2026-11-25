@@ -20,6 +20,8 @@ dependencies:
   json_annotation: ^4.9.0
   dio: ^5.8.0
   flutter_bloc: ^9.1.1
+  freezed: ^4.0.3
+  freezed_annotation: ^3.1.0
 
 dev_dependencies:
   flutter_test:
