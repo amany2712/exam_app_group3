@@ -1,17 +1,46 @@
 import 'package:exam_app/config/base_state/base_state.dart';
 import 'package:exam_app/features/auth/domain/entities/auth_entity.dart';
-import 'package:exam_app/features/auth/domain/entities/user_entity.dart';
 
-class AuthState {
-  final BaseState<AuthEntity> authState;
 
-  AuthState({BaseState<AuthEntity>? authState})
-      : authState = authState ??
-      BaseState<AuthEntity>(isLoading: false, errMsg: null, data: null);
 
-  AuthState copyWith({BaseState<AuthEntity>? authState}) =>
-      AuthState(authState: authState ?? this.authState);
+
+import 'package:exam_app/config/base_state/base_state.dart';
+import 'package:exam_app/features/auth/domain/entities/auth_entity.dart';
+import 'package:exam_app/features/auth/domain/entities/forget_password_entity.dart';
+import 'package:exam_app/features/auth/domain/entities/verify_reset_code_entity.dart';
+import 'package:exam_app/features/auth/domain/entities/reset_password_entity.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'auth_state.freezed.dart';
+
+@freezed
+abstract class AuthState with _$AuthState {
+  const factory AuthState({
+    @Default(BaseState<AuthEntity>())
+    BaseState<AuthEntity> authState,
+
+    @Default(BaseState<ForgetPasswordEntity>())
+    BaseState<ForgetPasswordEntity> forgotPasswordState,
+
+    @Default(BaseState<VerifyResetCodeEntity>())
+    BaseState<VerifyResetCodeEntity> verifyResetCodeState,
+
+    @Default(BaseState<ResetPasswordEntity>())
+    BaseState<ResetPasswordEntity> resetPasswordState,
+  }) = _AuthState;
 }
+
+
+// class AuthState {
+//   final BaseState<AuthEntity> authState;
+
+//   AuthState({BaseState<AuthEntity>? authState})
+//       : authState = authState ??
+//       BaseState<AuthEntity>(isLoading: false, errMsg: null, data: null);
+
+//   AuthState copyWith({BaseState<AuthEntity>? authState}) =>
+//       AuthState(authState: authState ?? this.authState);
+// }
 
 
 

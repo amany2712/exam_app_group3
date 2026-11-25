@@ -3,7 +3,7 @@ class BaseState<T> {
   final String? errMsg;
   final T? data;
 
-  BaseState({
+ const BaseState({
     this.isLoading = false,
     this.errMsg,
     this.data,
