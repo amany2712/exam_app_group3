@@ -1,21 +1,24 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
+part 'verify_reset_code_request.freezed.dart';
 part 'verify_reset_code_request.g.dart';
 
-@JsonSerializable()
-class VerifyResetCodeRequest {
-  @JsonKey(name: 'resetCode')
-  final String resetCode;
+@freezed
+class VerifyResetCodeRequest with _$VerifyResetCodeRequest {
+  const factory VerifyResetCodeRequest({
+    required String resetCode,
+  }) = _VerifyResetCodeRequest;
 
-  const VerifyResetCodeRequest({
-    required this.resetCode,
-  });
-
-  factory VerifyResetCodeRequest.fromJson(
-    Map<String, dynamic> json,
-  ) =>
+  factory VerifyResetCodeRequest.fromJson(Map<String, dynamic> json) =>
       _$VerifyResetCodeRequestFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$VerifyResetCodeRequestToJson(this);
+  @override
+  // TODO: implement resetCode
+  String get resetCode => throw UnimplementedError();
+
+  @override
+  Map<String, dynamic> toJson() {
+    // TODO: implement toJson
+    throw UnimplementedError();
+  }
 }
