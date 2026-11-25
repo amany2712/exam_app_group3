@@ -252,7 +252,7 @@ packages:
     source: sdk
     version: "0.0.0"
   freezed:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: freezed
       sha256: cb910646cb09265d49077b63b600ef1f5a718c1d6031836432237ddeabae1b12
