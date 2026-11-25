@@ -46,3 +46,36 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+
+# Generated Dart files
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+*.config.dart
+
+# Flutter generated files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+coverage/
+
+# Android local files
+android/local.properties
+android/key.properties
+android/.gradle/
+
+# iOS generated files
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+
+# IDE
+.idea/
+*.iml
+
+# Temporary files
+*.log
+*.swp
+.DS_Store
